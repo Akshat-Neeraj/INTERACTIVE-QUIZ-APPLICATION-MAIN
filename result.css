@@ -1,0 +1,207 @@
+/* General Styles */
+:root {
+    --bg-dark: #1e2328;
+    --card-bg: #2e3133;
+    --accent: #ffb347;
+    --accent-hover: #ff9800;
+    --text-light: #ffffff;
+    --text-muted: #aaaaaa;
+    --button-text: #1e2328;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--card-bg);
+}
+
+/* WebKit Scrollbar Styling */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 5px;
+    border: 2px solid var(--card-bg);
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #202020;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.6rem;
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-list li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-list li a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.nav-list li a.active {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.signup-btn {
+    background-color: var(--accent);
+    color: var(--button-text);
+    font-size: 1rem;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.signup-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger main heading */
+    color: var(--accent);
+    text-align: center;
+    margin-top: 50px; /* Space above heading */
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.history-container {
+    margin: 30px auto;
+    max-width: 900px; /* Slightly wider container */
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Use separate for border-radius on cells */
+    border-spacing: 0 10px; /* Add vertical spacing between rows */
+    color: var(--text-light);
+}
+
+th, td {
+    padding: 15px 12px; /* Increased padding */
+    text-align: center;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #3a3f44; /* Slightly darker header */
+    color: var(--text-light);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 8px; /* Rounded corners for headers */
+}
+
+td {
+    background-color: #3a3f44; /* Same background as header, but with spacing */
+    border-bottom: none; /* Remove default border-bottom, rely on spacing */
+}
+
+/* Style for the first column (index) and last column (date) */
+td:first-child,
+td:last-child {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.no-data {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 30px;
+    font-size: 1.1rem;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+}
+
+.clear-btn {
+    background-color: #e74c3c; /* Red for clear button */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clear-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: #202020;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 25px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: auto;
+}

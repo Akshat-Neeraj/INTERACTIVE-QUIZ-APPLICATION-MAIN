@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz History - Quizzer</title>
+  <link rel="stylesheet" href="result.css">
+  <link rel="icon" href="Logo.png">
+  <script src="https://kit.fontawesome.com/1fb7c3da32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Quizzer</a>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="result.html" class="active">Result</a></li> <!-- Active link -->
+                <li><a href="about.html">About Us</a></li>
+                <li>
+                  <a href="login.html">
+                    <button class="signup-btn">Sign Up</button>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Quiz History</h1>
+
+  <div class="history-container">
+    <table id="history-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Category</th>
+          <th>Score</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="history-body">
+        <!-- History will be loaded here by JavaScript -->
+      </tbody>
+    </table>
+
+    <p id="no-history" class="no-data" style="display: none;">No quiz history found.</p>
+
+    <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Quizzer. All Rights Reserved
+  </footer>
+
+  <script>
+    // Highlight the active navigation link
+    document.querySelectorAll('.nav-list a').forEach(link => {
+        if (link.href.includes(window.location.pathname)) {
+            link.classList.add('active');
+        }
+    });
+
+    function loadHistory() {
+      const historyBody = document.getElementById('history-body');
+      const noHistory = document.getElementById('no-history');
+      const historyTable = document.getElementById('history-table');
+
+      // Retrieve history from localStorage
+      const history = JSON.parse(localStorage.getItem('quizHistory')) || [];
+
+      if (history.length === 0) {
+        noHistory.style.display = 'block';
+        historyTable.style.display = 'none'; // Hide table if no data
+        return;
+      }
+
+      // Hide the "no history" message and show the table
+      noHistory.style.display = 'none';
+      historyTable.style.display = 'table'; // Ensure table is visible
+
+      // Clear existing rows before loading (in case this function is called multiple times)
+      historyBody.innerHTML = '';
+
+      // Populate the table
+      history.forEach((entry, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${entry.category.charAt(0).toUpperCase() + entry.category.slice(1)}</td>
+          <td>${entry.score}/${entry.total}</td>
+          <td>${entry.date}</td>
+        `;
+        historyBody.appendChild(row);
+      });
+    }
+
+    function clearHistory() {
+      if (confirm('Are you sure you want to clear your entire quiz history? This action cannot be undone.')) {
+        localStorage.removeItem('quizHistory');
+        loadHistory(); // Reload the history to reflect the cleared state
+        alert('Quiz history cleared!');
+      }
+    }
+
+    // Load history when the page is fully loaded
+    document.addEventListener('DOMContentLoaded', loadHistory);
+  </script>
+</body>
+</html>

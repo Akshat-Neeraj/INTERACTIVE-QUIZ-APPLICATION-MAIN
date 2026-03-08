@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - Quizzer</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="Logo.png">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/1fb7c3da32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Quizzer</a>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="about.html" class="active">About Us</a></li> <!-- Active link -->
+                <li>
+                  <a href="login.html">
+                    <button class="signup-btn">Sign Up</button>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>About Quizzer</h1>
+        <p>Welcome to Quizzer, your go-to destination for interactive quizzes! Whether you're here to test your knowledge, prepare for a competitive exam, or just have fun, Quizzer brings you a wide variety of quizzes on topics ranging from science and history to pop culture and technology.</p>
+        <p>Quizzer is a dynamic and interactive quiz platform designed to make learning fun, accessible, and effective. Whether you're a student sharpening your knowledge, a teacher creating engaging assessments, or just someone who loves a good trivia challenge — Quizzer has something for everyone.</p>
+        <p>Our mission is to make learning fun, accessible, and rewarding for everyone. We're constantly updating our questions and features to give you the best learning experience possible.</p>
+
+        <h2>Contact Us</h2>
+        <!-- Updated form action for clarity, using a more generic placeholder if formspree is not explicitly required for now -->
+        <form action="#" method="POST" id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 Quizzer. All Rights Reserved
+    </footer>
+
+    <script>
+        // Add 'active' class to the current page's nav link (basic example)
+        document.querySelector('a[href="about.html"]').classList.add('active');
+
+        // Handle form submission (optional: can use formspree or simulate)
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Basic simulation of sending message
+            alert('Message sent! Thank you for your feedback.');
+            contactForm.reset(); // Reset the form
+        });
+    </script>
+</body>
+</html>
