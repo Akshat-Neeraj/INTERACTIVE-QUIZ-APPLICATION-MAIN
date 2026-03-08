@@ -118,34 +118,6 @@ Quizzer-App/
 Explore the live application here:
 [https://akshat-neeraj.github.io/INTERACTIVE-QUIZ-APPLICATION-MAIN/](https://akshat-neeraj.github.io/INTERACTIVE-QUIZ-APPLICATION-MAIN/)
 
----
-
-### 7. Screenshots
-
-*(Please replace these with actual screenshots of your polished application. High-quality visuals are crucial for a good README.)*
-
-**Home Page:**
-![Quizzer Home Page](https://github.com/akshat-neeraj/INTERACTIVE-QUIZ-APPLICATION-MAIN/assets/6a5b241d-0fb0-4182-92cd-b79ba44a2f7f)
-*(Link to your actual screenshot)*
-
-**Login/Sign Up Page:**
-![Quizzer Login Page](https://github.com/akshat-neeraj/INTERACTIVE-QUIZ-APPLICATION-MAIN/assets/ce5732eb-f3cc-4930-9415-099f8f941ac2)
-*(Link to your actual screenshot)*
-
-**Quiz Page:**
-![Quizzer Quiz Page](https://github.com/akshat-neeraj/INTERACTIVE-QUIZ-APPLICATION-MAIN/assets/34d6f405-1112-4353-8be8-930677287591)
-*(Link to your actual screenshot)*
-
-**Results Page:**
-![Quizzer Results Page](https://github.com/akshat-neeraj/INTERACTIVE-QUIZ-APPLICATION-MAIN/assets/ee4c87c3-95ff-4af3-b363-14bb1de700d4)
-*(Link to your actual screenshot)*
-
-**About Us Page:**
-![Quizzer About Us Page](https://github.com/akshat-neeraj/INTERACTIVE-QUIZ-APPLICATION-MAIN/assets/af97edd5-3662-4a18-adb4-ccc597337c94)
-*(Link to your actual screenshot)*
-
----
-
 ### 8. Future Enhancements
 
 *   **Backend Integration:** Connect to a backend server for robust user management, quiz data storage, and score persistence.
@@ -166,28 +138,11 @@ Explore the live application here:
 *   **Domain:** Front-End Web Development
 *   **Company:** CodeTech IT Solutions
 *   **Mentor:** Neela Santosh
-*   **Email:** `akshat.neeraj123@example.com` *(Please replace with your actual email)*
-*   **GitHub:** [akshat-neeraj](https://github.com/akshat-neeraj) *(Link to your GitHub profile)*
+*   **Email:** `akshat.neeraj24680@gmail.com`
+*   **GitHub:** https://github.com/Akshat-Neeraj
 
 ---
 
 ### 10. License
 
 This project is open source and available under the MIT License. See the `LICENSE.md` file for more details. *(If you don't have a LICENSE.md, you can state "This project is for educational purposes." or similar.)*
-
----
-
-**Key improvements in this README:**
-
-*   **Project Title & Description:** More prominent and informative.
-*   **Table of Contents:** Makes it easier to navigate.
-*   **Key Features:** Clearly lists the polished functionalities and UI aspects.
-*   **Technologies Used:** Updated to reflect the final set of technologies and their application.
-*   **Project Structure:** Clearer representation of your file organization.
-*   **Live Demo:** Direct link to your deployed site.
-*   **Screenshots:** Added placeholders for you to insert actual images, which are vital. I've used the URLs you provided as placeholders, but you should aim to upload actual screenshots to your GitHub repository and link to those for best results.
-*   **Future Enhancements:** Outlines potential next steps.
-*   **Contact Information:** Organized and includes links.
-*   **License:** Standard section, can be adapted.
-
-Please review this README, fill in the placeholders (especially for screenshots), and let me know if any adjustments are needed!
